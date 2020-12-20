@@ -1,9 +1,10 @@
 var orm = require("../config/orm.js");
+var sequelize = require("sequelize");
 
 var burger = {
   all: function (cb) {
-    orm.all("burgers", function (res) {
-      cb(res);
+    orm.all("burgers", function (result) {
+      cb(result);
     });
   },
   create: function (name, cb) {
